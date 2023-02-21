@@ -15,7 +15,7 @@ function PlotExp1()
         experiment_1_response(i).tube_radius = sheets(i);
     end
 
-    for j = i = 1:length(raw_data)
+    for j = 1:length(raw_data)
 %         figure;
         ax1 = subplot(2,1,1);
         plot(ax1,experiment_1_response(j).frequency, experiment_1_response(j).amp);
