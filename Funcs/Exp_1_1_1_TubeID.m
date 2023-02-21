@@ -16,7 +16,7 @@ function PlotExp1()
     end
 
     for j = 1:length(raw_data)
-%         figure;
+        figure;
         ax1 = subplot(2,1,1);
         plot(ax1,experiment_1_response(j).frequency, experiment_1_response(j).amp);
         grid(ax1,'on')
