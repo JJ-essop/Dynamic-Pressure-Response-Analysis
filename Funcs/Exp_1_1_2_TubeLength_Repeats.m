@@ -32,8 +32,16 @@ function Exp_1_1_2_TubeLength_Repeats()
         ylabel('Amplitude ratio')
         title('Dynamic Pressure Response of ID = 1.37mm')
         
-        legend('L = 1m - repeat 1', 'L = 1m - repeat 2', 'L = 1m - repeat 3', 'L = 1m - repeat 4')
-
+        if j == 1
+            legend('L = 1m - repeat 1')
+        elseif j == 2
+            legend('L = 1m - repeat 1', 'L = 1m - repeat 2')
+        elseif j == 3
+            legend('L = 1m - repeat 1', 'L = 1m - repeat 2', 'L = 1m - repeat 3')
+        elseif j == 4
+            legend('L = 1m - repeat 1', 'L = 1m - repeat 2', 'L = 1m - repeat 3', 'L = 1m - repeat 4')
+        end
+        
         ax2 = subplot(2,1,2);
         plot(ax2,experiment_1_response(j).frequency, experiment_1_response(j).phase);
         hold on
@@ -57,8 +65,12 @@ function Exp_1_1_2_TubeLength_Repeats()
         ylabel('Amplitude ratio')
         title('Dynamic Pressure Response of ID = 1.37mm')
         
-        legend('L = 1.2m - repeat 1', 'L = 1.2m - repeat 2')
-
+        if j == 5
+            legend('L = 1.2m - repeat 1')
+        elseif j == 6
+            legend('L = 1.2m - repeat 1', 'L = 1.2m - repeat 2')
+        end
+        
         ax2 = subplot(2,1,2);
         plot(ax2,experiment_1_response(j).frequency, experiment_1_response(j).phase);
         hold on
@@ -82,8 +94,14 @@ function Exp_1_1_2_TubeLength_Repeats()
         ylabel('Amplitude ratio')
         title('Dynamic Pressure Response of ID = 1.37mm')
         
-        legend('L = 2m - repeat 1', 'L = 2m - repeat 2', 'L = 2m - repeat 3')
-
+        if j == 7
+            legend('L = 2m - repeat 1')
+        elseif j == 8 
+            legend('L = 2m - repeat 1', 'L = 2m - repeat 2')
+         elseif j == 9 
+            legend('L = 2m - repeat 1', 'L = 2m - repeat 2', 'L = 2m - repeat 3')        
+        end
+        
         ax2 = subplot(2,1,2);
         plot(ax2,experiment_1_response(j).frequency, experiment_1_response(j).phase);
         hold on
