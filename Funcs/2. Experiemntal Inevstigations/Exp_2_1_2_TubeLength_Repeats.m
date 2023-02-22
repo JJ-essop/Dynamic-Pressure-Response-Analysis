@@ -1,4 +1,4 @@
-function Exp_1_1_2_TubeLength_Repeats()
+function Exp_2_1_2_TubeLength_Repeats()
 
     foldername = 'G:\01 - Aero Projects\06 - FS Data\Pressure Response Anaysis\1 - Experimental Tests\1.1 - Tube Properties\1.1.2 - Tube Length\';
 
