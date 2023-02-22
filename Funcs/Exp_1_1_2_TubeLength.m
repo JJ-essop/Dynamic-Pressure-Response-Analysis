@@ -22,13 +22,6 @@ function Exp_1_1_2_TubeLength()
     raw_data{18} = xlsread( [foldername, 'LongLengthHypo_2022_12_05_0_3m.xlsx'], 'Single value' );
     raw_data{19} = xlsread( [foldername, 'LongLengthHypo_2022_12_05_0_2m.xlsx'], 'Single value' );
     
-    raw_data_rpts{1} = xlsread( [foldername, 'Repeats\LongLengthHypo_2022_12_01_1_0m_r2.xlsx'], 'Single value' );
-    raw_data_rpts{2} = xlsread( [foldername, 'Repeats\LongLengthHypo_2022_12_01_1_0m_r3.xlsx'], 'Single value' );
-    raw_data_rpts{3} = xlsread( [foldername, 'Repeats\LongLengthHypo_2022_12_01_1_0m_r4.xlsx'], 'Single value' );
-    raw_data_rpts{4} = xlsread( [foldername, 'Repeats\LongLengthHypo_2022_12_01_1_2m_r2.xlsx'], 'Single value' );
-    raw_data_rpts{5} = xlsread( [foldername, 'Repeats\LongLengthHypo_2022_12_01_2m_r2.xlsx'], 'Single value' );
-    raw_data_rpts{6} = xlsread( [foldername, 'Repeats\LongLengthHypo_2022_12_01_2m_r3.xlsx'], 'Single value' );
-
     experiment_1_response = struct();
 
     for i = 1:length(raw_data)
@@ -40,6 +33,7 @@ function Exp_1_1_2_TubeLength()
 
     for j = 1:length(raw_data)
         figure;
+        set(gcf,'position',[500,300,1000,600]);
         ax1 = subplot(2,1,1);
         plot(ax1,experiment_1_response(j).frequency, experiment_1_response(j).amp);
         hold on
@@ -49,7 +43,7 @@ function Exp_1_1_2_TubeLength()
         ylabel('Amplitude ratio')
         title('Dynamic Pressure Response of ID = 1.37mm')
         
-        legend(['L = ', experiment_1_response(j).tube_length, 'mm'])
+        legend(['L = ', experiment_1_response(j).tube_length, 'm'])
 
         ax2 = subplot(2,1,2);
         plot(ax2,experiment_1_response(j).frequency, experiment_1_response(j).phase);
@@ -60,7 +54,6 @@ function Exp_1_1_2_TubeLength()
         % set(ax2,'YTick',[0:50:250])
         set(ax2,'Ydir','reverse')
         ylabel('Pahse [deg]')
-        
     end
 
 end
